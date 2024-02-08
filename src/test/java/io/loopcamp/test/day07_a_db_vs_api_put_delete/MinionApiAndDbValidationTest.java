@@ -42,5 +42,6 @@ public class MinionApiAndDbValidationTest extends MinionApiTestBase {
         assertThat(minion.get("NAME"), equalTo(databaseMap.get("name")));
         assertThat(minion.get("PHONE"), equalTo(databaseMap.get("phone")));
         MinionRestUtilities.deleteMinionById(newMinionId);
+        DatabaseUtilities.destroy();
     }
 }
