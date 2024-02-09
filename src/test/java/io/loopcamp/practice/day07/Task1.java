@@ -75,5 +75,6 @@ public class Task1 extends HRApiTestBase {
                 .and().pathParam("id", 200)
                 .when().delete("/regions/{id}")
                 .then().statusCode(HttpStatus.SC_OK);
+        DatabaseUtilities.destroy();
     }
 }

@@ -25,4 +25,11 @@ public class MinionRestUtilities {
         minion.setPhone(faker.numerify("703#######"));
         return minion;
     }
+
+    public static Minion getMinionById(int minionId) {
+        Response response = given().accept(ContentType.JSON)
+                .and().pathParam("id", minionId)
+                .when().get(baseUrl + "/minions/{id}");
+        return response.as(Minion.class);
+    }
 }
