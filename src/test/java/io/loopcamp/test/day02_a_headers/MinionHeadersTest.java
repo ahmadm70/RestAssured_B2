@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.*;
 
 public class MinionHeadersTest {
-    String endPoint = "http://54.92.243.31:8000/api/minions";
+    String endPoint = "http://44.211.67.23:8000/api/minions";
 
     @DisplayName("Get all headers for minions")
     @Test
